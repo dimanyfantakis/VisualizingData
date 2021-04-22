@@ -31,7 +31,7 @@ Dimitris Anyfantakis
 
 ## Version History
 
-* 0.0 [2021 April]
+* v.0.0 [2021 April]
     * Tranformation Loading and Backup scripts
     * Setup of the Web App
     * Visualing data in a Line/Bar chart using dynamic queries
