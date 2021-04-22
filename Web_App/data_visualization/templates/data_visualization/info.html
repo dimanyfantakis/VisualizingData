@@ -1,0 +1,36 @@
+{% extends "data_visualization/base.html" %}
+{% block title %}
+    <title>Info</title>
+{% endblock title %}
+{% block content %}
+    <h3>Available Data</h3>
+    <div class="row">
+        <h5>Countries:</h5>
+        <div class="col-5">
+            {% for row1 in Query1 %}
+                <tr>
+                    <td>{{ row1.0 }},</td>
+                </tr>
+            {% endfor %}
+        </div>
+        <h5>Years:</h5>
+        <div class="col">
+            {% for row2 in Query2 %}
+                <tr>
+                    <td>{{ row2.0 }},</td>
+                </tr>
+            {% endfor %}
+        </div>
+        <h5>Measurements:</h5>
+        <div class="col">
+            {% for row3 in Query3 %}
+
+                <tr>
+                    <td>{{ row3 }},</td>
+                </tr>
+
+            {% endfor %}
+        </div>
+
+    </div>
+{% endblock content %}

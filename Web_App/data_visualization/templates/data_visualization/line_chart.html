@@ -1,0 +1,48 @@
+{% extends "data_visualization/base.html" %}
+{% block title %}
+    <title>Line Chart</title>
+{% endblock title %}
+{% block content %}
+<!--
+-->
+<div class="chart-container" style="position: relative; height:40vh; width:45vw">
+    <canvas id="myChart" width="200" height="200"></canvas>
+</div>
+{% endblock content %}
+{% block scripts%}
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [{% for row2 in Query2 %}'{{row2.0}}',{% endfor %}],
+                datasets: [{
+                    label: ['{{ Label }}'],
+                    data: [{% for row in Query %}'{{row.0}}',{% endfor %}],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+{% endblock scripts %}
