@@ -3,23 +3,27 @@ A Web App that visualizes data from Gapminder
 
 ## Description
 
-toDo
+A Web Application developed in Django that connects to a MySQL database created with data from Gapminder and uses dynamic queries to visualize data with ChartJS graphs
 
 ## Getting Started
 
-### Dependencies
-
-* Python
-* Pandas/NumPy libraries
 
 ### Web framework used
 
 * [Django](https://www.djangoproject.com/)
 
+### Charts
+* [ChartJS](https://www.chartjs.org/)
 
-### Executing program
 
-* How to run the server
+### Usage
+
+* Create and activate a virtual environment. In [PyCharm](https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html)
+* Install dependencies
+```
+pip install -r requirements.txt
+```
+* Run the server
 ```
 python manage.py runserver
 ```
