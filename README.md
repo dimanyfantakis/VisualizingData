@@ -3,29 +3,34 @@ A Web App that visualizes data from Gapminder
 
 ## Description
 
-A Web Application developed in Django that connects to a MySQL database created with data from Gapminder and uses dynamic queries to visualize data with ChartJS graphs
+A Web Application developed in Django that connects to a MySQL database populated with data regarding countries measurements from WorldBank and runs dynamic queries to visualize data using ChartJS graphs
 
 ## Getting Started
 
 
-### Web framework used
+### Backend Server
 
-* [Django](https://www.djangoproject.com/)
+* [NodeJS](https://nodejs.org/en/)
+
+### Frontend Client
+
+* [ReactJS](https://reactjs.org/)
 
 ### Charts
 * [ChartJS](https://www.chartjs.org/)
+* [React-Vis](https://github.com/uber/react-vis)
 
 
 ### Usage
 
-* Create and activate a virtual environment. In [PyCharm](https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html)
+* 
 * Install dependencies
 ```
-pip install -r requirements.txt
+npm install
 ```
 * Run the server
 ```
-python manage.py runserver
+node app.js
 ```
 
 ## Authors
@@ -35,7 +40,5 @@ Dimitris Anyfantakis
 
 ## Version History
 
-* v.0.0 [2021 April]
+* v.0.0 [2022 April]
     * Tranformation Loading and Backup scripts
-    * Setup of the Web App
-    * Visualing data in a Line/Bar chart using dynamic queries
